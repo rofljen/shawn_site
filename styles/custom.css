@@ -56,16 +56,18 @@ a {
 
 .item-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* optional, you want two columns only */
     gap: 20px;
     padding: 20px;
+    align-items: flex-start; /* make both sides align at top */
 }
 
 .detail-img {
-    flex: 1 1 45%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    align-items: flex
+    display: flex;
+    padding: 
+    gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .detail-img .grid-item {
