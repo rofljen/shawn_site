@@ -1,87 +1,70 @@
+/* Reset margins and paddings */
 body {
-    margin-top: 0;
-    padding-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* Navigation bar */
 .topnav {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  background: gray;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px; /* Remove vertical padding */
-  height: 60px; /* Consistent header height */
-  box-sizing: border-box;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background: gray;
+    color: white;
 }
 
 .topnav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
 }
 
-a {
-    color:white;
-}
-
-.toplogo {
-    text-align: left;
-    vertical-align: baseline;
-}
-
-.grid-container {
- margin-top: 50px;
-  display: grid; /* Declares the element as a grid container */
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-  grid-template-rows: repeat(5, 1fr); /* Creates 3 equal-height rows */
-  gap: 10px; /* Adds a 10px gap between grid items */
-  width: 80vw; /* Ensures the grid takes up full width of its parent */
-  border: 1px solid #ccc; /* Optional: Adds a border to the container */
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.grid-item {
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #999;
-}
-
+/* Container for the two columns */
 .item-container {
     display: flex;
-    flex-wrap: nowrap; /* optional, you want two columns only */
+    flex-wrap: nowrap; /* keep two columns */
     gap: 20px;
     padding: 20px;
-    align-items: flex-start; /* make both sides align at top */
+    align-items: flex-start; /* align top edges */
 }
 
+/* Left: Grid of images/items */
 .detail-img {
-    align-items: flex
-    display: flex;
-    padding: 
+    flex: 1 1 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    flex-wrap: nowrap;
+    min-height: 300px; /* ensures grid shows */
 }
 
 .detail-img .grid-item {
     background-color: #ddd;
     aspect-ratio: 1/1;
-    display:  flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
+    border: 1px solid #999;
 }
 
+/* Right: Item description/content */
 .item-detail {
     flex: 1 1 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+    .item-container {
+        flex-direction: column;
+    }
+    .detail-img, .item-detail {
+        flex: 1 1 100%;
+    }
 }
