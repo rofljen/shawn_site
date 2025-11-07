@@ -9,11 +9,15 @@ body {
 .topnav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* vertical centering */
     padding: 0 20px;
-    height: 150px;
+    height: 120px; /* adjust as needed */
     background: gray;
-    color: white;
+}
+
+.topnav img.site-logo {
+    height: 80px;
+    margin: 0; /* no extra spacing */
 }
 
 .topnav a {
@@ -22,11 +26,6 @@ body {
     margin-left: 15px;
 }
 
-.site-logo {
-    margin-top: 50px;
-    align: left;
-}
-/* Container for the two columns */
 .item-container {
     display: flex;
     flex-wrap: nowrap; /* keep two columns */
