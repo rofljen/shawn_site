@@ -22,6 +22,10 @@ body {
     margin-left: 15px;
 }
 
+.site-logo {
+    padding-top: 50px;
+    align: left;
+}
 /* Container for the two columns */
 .item-container {
     display: flex;
