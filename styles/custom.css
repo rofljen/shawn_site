@@ -13,20 +13,18 @@ body {
     padding: 0 20px; /* optional side spacing */
 }
 
-/* Navigation bar */
 .footer nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* left-align links */
   align-items: center;
   padding: 0 20px;
   height: 75px;
-  background: #BEBEBE;
+  background: grey; /* darker gray for contrast */
 }
-
 .footer nav a {
+  margin-right: 20px; /* spacing between links */
   color: white;
   text-decoration: none;
-  margin-left: 15px;
 }
 
 
@@ -41,6 +39,23 @@ body {
     gap: 20px;
     padding: 20px;
     align-items: flex-start; /* align top edges */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid-container .grid-item {
+    background-color: #ddd;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    font-size: 1.2rem;
 }
 
 /* Left: Grid of images/items */
