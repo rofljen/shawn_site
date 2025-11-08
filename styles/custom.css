@@ -6,12 +6,11 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 75px;
-  background: #BEBEBE;
+    height: 100px;
+    background-color: #bebebe;
+    display: flex;
+    align-items: left; /* vertically center logo */
+    padding: 0 20px; /* optional side spacing */
 }
 
 /* Navigation bar */
