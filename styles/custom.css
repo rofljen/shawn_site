@@ -6,7 +6,7 @@ body {
 }
 
 /* Navigation bar */
-.topnav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center; /* vertical centering */
@@ -15,12 +15,12 @@ body {
     background: gray;
 }
 
-.topnav img.site-logo {
+.site-logo {
     height: 80px;
     margin: 0; /* no extra spacing */
 }
 
-.topnav a {
+.nav a {
     color: white;
     text-decoration: none;
     margin-left: 15px;
